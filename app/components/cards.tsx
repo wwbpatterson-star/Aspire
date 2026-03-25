@@ -17,5 +17,5 @@ export function Badge({ children, tone }: { children: React.ReactNode; tone?: st
     emerald: "bg-emerald-500 text-white",
   };
 
-  return <span className={`badge ${styles[tone || "default"]}`}>{children}</span>;
+  return <span className={`badge ${styles[tone as keyof typeof styles || "default"]}`}>{children}</span>;
 }
